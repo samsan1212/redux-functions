@@ -1,0 +1,29 @@
+{
+  "name": "redux-functions",
+  "version": "0.0.0",
+  "main": "./cjs/main.js",
+  "module": "./esm/main.js",
+  "types": "./src/type.d.ts",
+  "repository": "https://github.com/samsan1212/redux-functions.git",
+  "author": "Sam Tsz San, CHAN <samchan148@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "redux": ">=4.0.0"
+  },
+  "dependencies": {
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "rollup": "^2.29.0",
+    "tslib": "^2.0.2",
+    "typescript": "^4.0.3"
+  },
+  "resolutions": {
+    "redux": "^4"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  }
+}
