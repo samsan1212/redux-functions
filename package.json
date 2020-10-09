@@ -1,6 +1,6 @@
 {
   "name": "redux-functions",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "main": "./cjs/main.js",
   "module": "./esm/main.js",
   "types": "./src/type.d.ts",
@@ -16,7 +16,9 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
+    "del": "^6.0.0",
     "rollup": "^2.29.0",
+    "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.0.2",
     "typescript": "^4.0.3"
   },
@@ -24,6 +26,6 @@
     "redux": "^4"
   },
   "scripts": {
-    "build": "rollup -c"
+    "build": "node removeFiles.js && rollup -c"
   }
 }

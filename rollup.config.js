@@ -3,6 +3,7 @@ import packageJson from "./package.json";
 // plugins
 import typescript from "@rollup/plugin-typescript";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { terser } from "rollup-plugin-terser";
 
 const base = {
   input: "src/main.ts",
@@ -30,9 +31,10 @@ export default [
   },
   {
     ...base,
+    plugins: [...base.plugins, terser()],
     external: [],
     output: {
-      file: "umd/redux-functions.js",
+      file: "umd/main.js",
       format: "umd",
       name: "ReduxFunctions",
     },
