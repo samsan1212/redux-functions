@@ -22,7 +22,7 @@ CDN
 
 ```html
 <!-- format https://cdn.jsdelivr.net/npm/redux-functions@{{VERSION}}/umd/main.js -->
-<script src="https://cdn.jsdelivr.net/npm/redux-functions@0.0.7/umd/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/redux-functions@0.0.9/umd/main.js"></script>
 ```
 
 ## How to Use
@@ -65,8 +65,13 @@ pong(true) // { type: "DELAY_PONG", payload: true };
 Inspired by [redux-toolkit](https://redux-toolkit.js.org/), You can also use the action creator to verify an unknown action.
 
 ```typescript
+// In Javascript, using "=="
+ping == { type: "PING" } // true
+ping == { type: "PONG" } // false
+
+// In Typescript
 ping.is({ type: "PING" }) // true
-ping.is({ type: "PONG" }) // true
+ping.is({ type: "PONG" }) // false
 ```
 
 #### Caveat

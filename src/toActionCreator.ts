@@ -11,6 +11,7 @@ function toActionCreator<T>(type: string): AppActionCreator<T> {
         return { type };
     }
     actionCreator.is = (action: AnyAction) => action.type === type;
+    actionCreator.toString = () => type;
     return actionCreator
 }
 
