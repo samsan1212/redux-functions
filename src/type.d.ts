@@ -1,24 +1,23 @@
-import { Action, Reducer } from "redux";
+import { Action, Reducer, ActionCreator, AnyAction } from "redux";
 
+/* Types */
 export interface AppAction<T = unknown> extends Action<string> {
     payload: T;
 }
 
 export interface AppActionCreator<T> {
-    (payload: T): AppAction<T>
-}
-
-export interface AppActionCreatorWithoutPayload {
-    (): Action<string>
+    (): Action<string>;
+    (payload: T): AppAction<T>;
+    is(a: AnyAction): boolean;
 }
 
 export interface ActionTypeCreator {
     (actionName: string): string
 }
+/* END: Types */
 
-export function toActionCreator<T = undefined>(type: string, noPayload: true): AppActionCreatorWithoutPayload
-export function toActionCreator<T>(type: string, noPayload?: false): AppActionCreator<T>
-
+/* Functions */
+export function toActionCreator<T>(type: string): AppActionCreator<T>;
 export function toReducer<T>(type: string, defaultValue: T): Reducer<T, AppAction<T>>
-
 export function toType(prefix: string): ActionTypeCreator
+/* END: Functions */
