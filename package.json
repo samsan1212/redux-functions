@@ -1,6 +1,6 @@
 {
   "name": "redux-functions",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./cjs/main.js",
   "module": "./esm/main.js",
   "types": "./src/type.d.ts",

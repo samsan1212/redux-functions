@@ -22,7 +22,7 @@ CDN
 
 ```html
 <!-- format https://cdn.jsdelivr.net/npm/redux-functions@{{VERSION}}/umd/main.js -->
-<script src="https://cdn.jsdelivr.net/npm/redux-functions@0.0.4/umd/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/redux-functions@0.0.5/umd/main.js"></script>
 ```
 
 ## How to Use
