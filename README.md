@@ -22,7 +22,7 @@ CDN
 
 ```html
 <!-- format https://cdn.jsdelivr.net/npm/redux-functions@{{VERSION}}/umd/main.js -->
-<script src="https://cdn.jsdelivr.net/npm/redux-functions@0.0.3/umd/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/redux-functions@0.0.4/umd/main.js"></script>
 ```
 
 ## How to Use
@@ -68,8 +68,8 @@ We can also use `toActionCreator` to achieve the purpose.
 ```typescript
 import { toActionCreator } from "redux-functions";
 
-// pass false as the 2nd parameter to the function
-export const delayPongAction = toActionCreator("DELAY_PONG", false) 
+// pass true as the 2nd parameter to the function
+export const delayPongAction = toActionCreator("DELAY_PONG", true) 
 // it will return a callback, () => ({ type: "DELAY_PONG" })
 ```
 
