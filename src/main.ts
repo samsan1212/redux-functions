@@ -1,9 +1,5 @@
-import type { Reducer, Action } from "redux";
-import type { AppActionCreatorWithoutPayload, AppActionCreator, ActionTypeCreator } from "./type";
-
-export interface AppAction<T = unknown> extends Action<string> {
-    payload: T;
-}
+import type { Reducer } from "redux";
+import type { AppActionCreatorWithoutPayload, AppActionCreator, ActionTypeCreator, AppAction } from "./type";
 
 export function toReducer<T>(type: string, defaultValue: T): Reducer<T, AppAction<T>> {
     return (state = defaultValue, action) => {
