@@ -1,6 +1,6 @@
 {
   "name": "redux-functions",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "main": "./cjs/main.js",
   "module": "./esm/main.js",
   "types": "./src/type.d.ts",
@@ -32,7 +32,8 @@
     "redux": "^4"
   },
   "scripts": {
-    "build": "node removeFiles.js && rollup -c",
-    "test": "jest"
+    "build": "yarn clear && yarn test && rollup -c",
+    "test": "jest",
+    "clear": "node removeFiles.js"
   }
 }

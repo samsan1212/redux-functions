@@ -1,8 +1,8 @@
 # Redux Functions
 
-[![npm](https://img.shields.io/npm/v/redux-functions?color=yellow&style=flat-square)](https://www.npmjs.com/package/redux-functions)
-
 A set of functions allow you to create action-creators, reducers, action-type **faster** and **type-safer**.
+
+[![npm](https://img.shields.io/npm/v/redux-functions?color=yellow&style=flat-square)](https://www.npmjs.com/package/redux-functions)
 
 ## Installation
 
@@ -70,8 +70,8 @@ ping == { type: "PING" } // true
 ping == { type: "PONG" } // false
 
 // In Typescript
-ping.is({ type: "PING" }) // true
-ping.is({ type: "PONG" }) // false
+ping.test({ type: "PING" }) // true
+ping.test({ type: "PONG" }) // false
 ```
 
 #### Caveat

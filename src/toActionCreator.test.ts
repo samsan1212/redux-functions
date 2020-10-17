@@ -11,7 +11,7 @@ describe("Verify action type with action creator", () => {
   it("should be identical with the api", () => {
     const type = "TEST";
     const action = toActionCreator(type);
-    expect(action.is({ type })).toBeTruthy();
+    expect(action.test({ type })).toBeTruthy();
   })
 
 });

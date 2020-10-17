@@ -8,7 +8,7 @@ export interface AppAction<T = unknown> extends Action<string> {
 export interface AppActionCreator<T> {
     (): Action<string>;
     (payload: T): AppAction<T>;
-    is(a: AnyAction): boolean;
+    test(a: AnyAction): a is AppAction<T>;
 }
 
 export interface ActionTypeCreator {
