@@ -9,6 +9,7 @@ export interface AppActionCreator<T> {
     (): Action<string>;
     (payload: T): AppAction<T>;
     test(a: AnyAction): a is AppAction<T>;
+    toString(): string;
 }
 
 export interface ActionTypeCreator {

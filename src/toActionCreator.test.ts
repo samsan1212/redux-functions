@@ -1,6 +1,6 @@
 import toActionCreator from "./toActionCreator";
 
-describe("Verify action type with action creator", () => {
+describe("toActionCreator", () => {
 
   it("should be able to directly compare using loosely comparison", () => {
     const type = "TEST";
