@@ -1,20 +1,20 @@
 import { Action, Reducer, ActionCreator, AnyAction } from "redux";
 
 /* Types */
-export interface AppAction<T = unknown> extends Action<string> {
-    payload: T;
+export interface AppAction<T = unknown, Type = any> extends Action<Type> {
+  payload: T;
 }
 
-export interface AppActionCreator<T> {
-    type: string;
-    (): Action<string>;
-    (payload: T): AppAction<T>;
-    test(a: AnyAction): a is AppAction<T>;
-    toString(): string;
+export interface AppActionCreator<T = any, Type = any> {
+  type: string;
+  (): Action<string>;
+  (payload: T): AppAction<T, Type>;
+  test(a: AnyAction): a is AppAction<T, Type>;
+  toString(): string;
 }
 
 export interface ActionTypeCreator {
-    (actionName: string): string;
+  (actionName: string): string;
 }
 /* END: Types */
 

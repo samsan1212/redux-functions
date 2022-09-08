@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2015",
     "module": "ESNext",
     "removeComments": false,
     "moduleResolution": "node",
@@ -9,7 +9,5 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": [
-    "./cjs","./esm","./umd", "./removeFiles.js"
-  ]
+  "exclude": ["./cjs", "./esm", "./umd"]
 }
